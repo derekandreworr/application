@@ -1,4 +1,15 @@
 # Docker
+- task: aquasecScanner@4
+  inputs:
+    image: 'applicationtest'
+    scanType: 'local'
+    register: false
+    hideBase: false
+    showNegligible: false
+    windowsScannerVersion: '4.2.0'
+    scanner: 'registry.aquasec.com/scanner:6.0.21083'
+    connection: 'Aqua Server'
+    caCertificates: true
 # Build a Docker image 
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
